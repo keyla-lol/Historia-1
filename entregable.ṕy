@@ -60,7 +60,7 @@ def delete_student():
     id = input("enter ID od delete: ")
     for s in students:
         if s ["id"] == id:
-            student.remove(s)
+            students.remove(s)
             print("delete")
             return
         print("student not found")
@@ -74,7 +74,29 @@ while True:
     print("3. search")
     print("4. update") 
     print("5. delete")   
-                            
+    print("6. exit ")
+    
+    option = input("option: ")
+    if option =="1":
+        add_student()
+    elif option == "2":
+        show_students()
+        
+    elif option == "3":
+        search_student()
+        
+    elif option == "4":
+        update_student()
+        
+    elif option == "5": 
+        delete_student()
+        
+    elif option == "6":
+        print("byee")
+        break
+    else: 
+        print("invalid option")
+                                    
     
         
         
